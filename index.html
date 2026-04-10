@@ -21,7 +21,7 @@
         /* --- PREMIUM BACKGROUND --- */
         body { 
             background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), 
-                        url('https://black-iz.com/photos/institute-course/web-development-company-in-bd.jpg') no-repeat center center fixed; 
+                        url('https://www.proalley.com/blog/content/images/2022/11/web-design-concept-with-drawings.jpg') no-repeat center center fixed; 
             background-size: cover;
             color: var(--text-main);
             overflow-x: hidden;
@@ -82,7 +82,7 @@
         @media (max-width: 768px) {
             .about-container { grid-template-columns: 1fr; }
             .hero-content h1 { font-size: 45px; }
-            .nav-links { display: none; }
+            .nav-links { display: flex; }
         }
     </style>
 </head>
@@ -104,7 +104,7 @@
     <div class="hero-content">
         <div class="badge"><i class="fas fa-shield-alt"></i> VERIFIED DEVELOPER PROFILE</div>
         <h1>Hi, I'm <span>Minahil Noor</span> </h1>
-        <p>Aspiring Web Developer | CS Student | Specialized in creating high-performance digital experiences at The Superior University.</p>
+        <p>Computer Science Student | Web & Android Developer focused on building fast, scalable, and user-friendly applications.</p>
         <a href="#projects" class="btn">View My Work <i class="fas fa-arrow-right"></i></a>
     </div>
 </section>
@@ -118,9 +118,13 @@
             
             <div class="skills-grid">
                 <div class="skill-card"><i class="fab fa-html5"></i><p>Web Dev</p></div>
-                <div class="skill-card"><i class="fab fa-java"></i><p>Java / OOP</p></div>
-                <div class="skill-card"><i class="fab fa-python"></i><p>Python</p></div>
+                <div class="skill-card"><i class="fab fa-java"></i><p>Java </p></div>
+                <div class="skill-card"><i class="fab fa-python"></i><p>python</p></div>
                 <div class="skill-card"><i class="fas fa-database"></i><p>SQL / DSA</p></div>
+                <div class="skill-card"><i class="fab fa-android"></i><p>Android Studio</p></div>
+                <div class="skill-card"><i class="fas fa-code"></i><p>XML</p></div>
+                <div class="skill-card"><i class="fas fa-laptop-code"></i><p>VS Code</p></div>
+                <div class="skill-card"><i class="fab fa-html5"></i><p>HTML / CSS</p></div>
             </div>
         </div>
         <div class="about-visual">
@@ -140,19 +144,19 @@
 <section id="contact">
     <div class="contact-box">
         <h2 style="color: var(--accent);">Ready to Start?</h2>
-        <p style="font-size: 18px; margin-bottom: 30px;">Let's discuss how we can build something amazing together.</p>
-        <p style="font-size: 24px; font-weight: 800;">minahil27mano@gmail.com</p>
+        <p style="font-size: 18px; margin-bottom: 30px;">Let’s connect and build something innovative, meaningful, and impactful together.</p>
+        
         
         <div class="social-links">
             <a href="https://www.linkedin.com/in/minahil-noor-0182283b7/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
             <a href="mailto:minahil27mano@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/minahil-noor" class="social-icon"><i class="fab fa-github"></i></a>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Minahil Noor | Designed with Premium Excellence</p>
+    <p>&copy; 2026 Minahil Noor</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -170,13 +174,7 @@
     });
 
 const projectData = [
-    {
-        title: "Brain Trainer App",
-        img: "https://techpp.com/wp-content/uploads/2024/05/Brain-Training-Apps-for-iPhone-and-Android.jpg",
-        desc: "Android-based interactive math practice application with live score tracking.",
-        tech: ["Java", "XML", "Android Studio"],
-        codeLink: "https://github.com/minahil-noor/Brain-Trainer-App"
-    },
+    
     {
         title: "Food Ordering System",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXriQSNFtAOG_S4pDKEk8EeRMCSNpj8JAa0g&s",
@@ -189,7 +187,14 @@ const projectData = [
         img: "https://mir-s3-cdn-cf.behance.net/projects/404/19c86e72976597.Y3JvcCwyMDE3LDE1NzcsMTM5LDA.png",
         desc: "Custom timer utility with personalized event notifications and UI.",
         tech: ["Java", "XML"],
-        codeLink: "https://github.com/minahil-noor/Egg-Timer-App"
+        codeLink: "https://github.com/minahil-noor/Egg-Timer-App-"
+    },
+      {
+        title: "Flappy Bird java ",
+        img: "https://www.thefactsite.com/wp-content/uploads/2014/02/flappy-bird-facts.jpg",
+        desc: "A Flappy Bird-style game built in Java using Android Studio, featuring smooth controls, obstacle mechanics, and real-time score tracking.",
+        tech: ["Java","Android Studio"],
+        codeLink: "https://github.com/minahil-noor/FlappyBirdJava"
     },
     {
         title: "Library Management",
@@ -203,8 +208,9 @@ const projectData = [
         img: "https://i.dawn.com/primary/2024/10/1320265434f26b5.gif",
         desc: "Live city weather fetching using global API integration and JSON.",
         tech: ["Java", "API", "JSON"],
-        codeLink: "https://github.com/minahil-noor/Weather-Intelligence"
+        codeLink: "https://github.com/minahil-noor/Weather-app"
     }
+    
 ];
 
 const container = document.getElementById('project-container');
@@ -218,7 +224,7 @@ projectData.forEach(p => {
                 <div style="margin-top: 15px;">
                     ${p.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
                 </div>
-                <a href="${p.codeLink}" target="_blank" class="btn" style="margin-top: 20px; display: inline-block;">View Code <i class="fas fa-code"></i></a>
+                <a href="${p.codeLink}" target="_blank" class="btn" style="margin-top: 20px; display: inline-block;">Explore Code <i class="fas fa-code"></i></a>
             </div>
         </div>
     `;
